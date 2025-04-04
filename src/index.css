@@ -1,68 +1,70 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap");
+@import "tailwindcss";
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@theme {
+  --color-primary: #00f050;
+  --color-secondary: #dedede;
+  --color-third: #b5b5b5;
+  --color-slidebar: #303030;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
+html,
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  font-family: "Roboto Flex", sans-serif, -apple-system, BlinkMacSystemFont;
+  background-color: #212121;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Anton", sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  text-decoration: none;
+}
+
+.app-container {
+  position: relative;
   min-height: 100vh;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.content {
+  position: relative;
+  z-index: 1;
+  color: white;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+/* Add any additional styling for your content */
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+::-webkit-scrollbar-track {
+  background: #303030;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00f050; /* Scrollbar color */
+  border-radius: 5px;
+  border: 2px solid #0f0f0f; /* Creates padding effect */
 }

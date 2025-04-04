@@ -1,0 +1,28 @@
+.snow-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    overflow: hidden;
+    pointer-events: none;
+  }
+  
+  .snow {
+    position: absolute;
+    width: var(--size);
+    height: var(--size);
+    background: var(--color);
+    border-radius: 50%;
+    opacity: var(--opacity);
+    filter: blur(var(--blur));
+    transform: translate(var(--x), -10px);
+    animation: fall var(--duration) var(--delay) linear infinite;
+  }
+  
+  @keyframes fall {
+    to {
+      transform: translate(var(--x-end), 100vh);
+    }
+  }
